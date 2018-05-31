@@ -1,0 +1,33 @@
+{
+  "name": "mb-sprint-demo",
+  "version": "1.0.0",
+  "description": "A demo for a client",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js > bundle.js",
+    "start": "node stream.js",
+    "test": "eslint .",
+    "frontend": "budo index.js:bundle.js --live"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "mapbox-gl": "^0.44.1",
+    "socket.io": "^2.0.3",
+    "twitter-stream-api": "^0.5.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.5.0",
+    "budo": "^10.0.3",
+    "eslint": "^3.19.0",
+    "twitter": "^1.7.1",
+    "uglify-js": "^3.0.13"
+  }
+}

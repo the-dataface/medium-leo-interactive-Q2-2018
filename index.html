@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Yelp LEO</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Mapbox GL-JS CSS -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+	<section id="mobile">
+		<div class="mobile-statement">
+			This interactive map is optimized for desktop. Please visit our <a href='https://www.yelpblog.com/2018/02/yelps-local-economic-outlook-american-diners-show-increasing-taste-independent-restaurants-nationwide'>
+			blog</a> for an interactive version optimized for mobile. 
+		</div>
+	</section>
+	<section id="loading">
+		<div class="loader-parent">
+			<div class="loader">
+				<div class="loader-text">LOADING</div>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</section>
+	<section id='scroll'>
+		<div class='scroll__graphic'>
+			<div id='map'>
+				<div id='tooltip'>
+					<div class='tooltip-container'>
+						<div class='city-name-container'>
+							<span class='city-name'></span><span class='metro-area'> (metro area)</span>
+							<p class='city-neighborhood-intro'>top neighborhoods</p>
+						</div>
+						<div class='city-neighborhood-text-container'></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='scroll__text'>
+			<div class='step final-step' data-step='6'>
+				<div class='header-container'>
+					<div class='header-text'>
+						<p class='main-header'>Explore the data yourself.</p>
+						<p class='sub-header'>Find out how each of the 50 metro areas in America have fared over the last year.</p>
+					</div>
+					<div class='timeperiod-select'>
+						<p class='timeperiod' data-quarter='q2'>Q2 2017</p>
+						<p class='timeperiod' data-quarter='q3'>Q3 2017</p>
+						<p class='timeperiod' data-quarter='q4'>Q4 2017</p>
+						<p class='timeperiod selected-timeperiod' data-quarter='q1'>Q1 2018</p>
+					</div>
+					<div id="search-bar-container">
+						<input class="search-bar" type="text" placeholder="Find your city...">
+						<div class="search-bar-results">
+						</div>
+				   </div>
+				</div>
+				<div id='city-info-card'>
+					<div class='hide-card-button-container'>
+						<p class='hide-card-button'>X</p>
+					</div>
+					<div class='move-city-button-container'>
+						<p class='prev-city move-city-button' data-direction='prev'>Prev</p>
+						<p class='next-city move-city-button' data-direction='next'>Next</p>
+					</div>
+					<div class='city-text-image-container card-section'>
+						<div class='city-text-container'>
+							<p class='city-name'></p>
+							<p class='city-population'></p>
+							<p class='city-rank'>
+								<span class='city-rank-number'></span>
+								<span class='city-rank-direction'></span> 
+							</p>
+						</div>
+						<div class='city-image-container'>
+							<img class='city-image' src='wp-content/uploads/2018/05/placeholder.jpeg'/>
+						</div>
+					</div>
+					<div class='dot-plot-container card-section'>
+						<p class='dot-plot-intro card-section-intro'></p>
+						<div class='dot-plot'></div>
+					</div>
+					<div class='bump-chart-container card-section'>
+						<p class='bump-chart-intro card-section-intro'></p>
+						<div class='bump-chart'></div>
+					</div>
+				</div>
+				<div id='honolulu-container'>
+					<div class='honolulu-rank-text-container'>
+						<div class='honolulu-rank'></div>
+						<p class='honolulu-text'>
+							Honolulu
+						</p>
+					</div>
+					<img class='honolulu-photo' src='wp-content/uploads/2018/05/honolulu.png'>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/stickyfill.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.2.5/d3-annotation.js"></script>
+	<script src='https://unpkg.com/intersection-observer'></script>
+	<script src='https://unpkg.com/scrollama'></script>
+    <script src='js/index.js'></script>
+</body>
+
+</html>
