@@ -188,10 +188,10 @@ map.on('style.load', () => {
 		if (largeScreen || mediumScreen) {
 			if (largeScreen) {
 				card.style('top', 40 + 'px')
-					.style('max-height', window.innerHeight - headerHeight + 'px');
+					.style('max-height', window.innerHeight - 40 + 'px');
 			} else {
 				card.style('top', 40 + 'px')
-					.style('max-height', window.innerHeight - headerHeight - 70 + 'px');
+					.style('max-height', window.innerHeight - 40 - 70 + 'px');
 			}
 			card.style('width', (window.innerWidth - headerWidth) / 2 + 'px')
 				
