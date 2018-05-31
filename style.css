@@ -546,18 +546,13 @@ footer.entry-meta {
 
 .final-step .header-container {
 	top:30px;
-	left:50%;
-	-webkit-transform:translateX(-50%);
-	    -ms-transform:translateX(-50%);
-	        transform:translateX(-50%);
-	width:100%;
+	left:0%;
 	position:absolute;
 	text-align:center;
 }
 
 .final-step .header-text {
 	text-align:center;
-	margin:auto;
 	background-color:white;
 	-webkit-box-shadow:1px 1px 6px 2px #0000001a;
 	        box-shadow:1px 1px 6px 2px #0000001a;
@@ -679,6 +674,9 @@ footer.entry-meta {
 } 
 
 @media only screen and (min-width : 1000px) {
+	.final-step .header-container {
+		max-width:600px;
+	}
 	.final-step .header-text {
 		margin-bottom:15px;
 		max-width:600px;
@@ -695,7 +693,7 @@ footer.entry-meta {
 	}
 	
 	.final-step .timeperiod-select {
-		width:40%
+		max-width:600px;
 	}
 	
 	.final-step .timeperiod {
@@ -704,9 +702,12 @@ footer.entry-meta {
 }
 
 @media only screen and (min-width : 764px) and (max-width : 999px) {
+.final-step .header-container {
+		max-width:400px;
+	}
 	.final-step .header-text {
 		margin-bottom:15px;
-		max-width:500px;
+		max-width:400px;
 		padding:10px;
 	}
 	
@@ -720,7 +721,7 @@ footer.entry-meta {
 	}
 	
 	.final-step .timeperiod-select {
-		width:40%
+		max-width:400px;
 	}
 	
 	.final-step .timeperiod {
@@ -730,6 +731,9 @@ footer.entry-meta {
 }
 
 @media only screen and (max-width : 763px)  {
+	.final-step .header-container {
+		max-width:400px;
+	}
 	.final-step .header-text {
 		margin-bottom:5px;
 		max-width:400px;
@@ -747,7 +751,7 @@ footer.entry-meta {
 	}
 	
 	.final-step .timeperiod-select {
-		width:100%
+		max-width:400px;
 	}
 	
 	.final-step .timeperiod {
@@ -1011,8 +1015,8 @@ footer.entry-meta {
 
 @media only screen and (min-width : 764px) and (max-width: 999px) {
 	#city-info-card {
-		max-width:350px;
-		min-width:330px;
+		max-width:300px;
+		min-width:300px;
 		padding:15px 15px 15px 15px
 	}
 
