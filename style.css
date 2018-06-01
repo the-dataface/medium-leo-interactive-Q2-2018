@@ -976,7 +976,7 @@ footer.entry-meta {
 	border-radius:5px;
 	left:calc(100% - 20px);
 	overflow-y:scroll;
-	max-height:95vh;
+	max-height:95%;
 }
 
 #city-info-card .card-section-intro {
